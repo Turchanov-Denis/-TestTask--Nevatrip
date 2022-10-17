@@ -1,4 +1,5 @@
 .excursions {
+    padding: 30px 0;
 
     &__body {
         width: 100%;
@@ -8,6 +9,7 @@
     }
 
     &__item {
+        margin-bottom: 60px;
         height: 370px;
         width: 100%;
     }
@@ -19,6 +21,7 @@
     }
 
     &__column {
+        position: relative;
         flex: 0 0 473px;
 
         &_big {
@@ -75,6 +78,7 @@
         margin-left: 10px;
         width: 187px;
         height: 52px;
+
     }
 
     &__price {
@@ -85,6 +89,33 @@
         span {
             font-size: 14px;
         }
+    }
+
+    &__image-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 154px;
+        height: 42px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        /* or 125% */
+        
+
+        &_blue {
+            background: #099CE8;
+            color: #FFFFFF;
+        }
+        &_yellow {
+            background: #FFD83B;
+            color: #000000;
+        }
+
     }
 
     @media (max-width: 900px) {
@@ -159,6 +190,7 @@
 
         &__list {
             padding: 20px 0 0 40px;
+
             li {
                 font-weight: 400;
                 font-size: 14px;
@@ -189,6 +221,32 @@
             span {
                 font-size: 10px;
             }
+        }
+        &__image-label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100px;
+            height: 42px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 20px;
+            /* or 125% */
+            
+    
+            &_blue {
+                background: #099CE8;
+                color: #FFFFFF;
+            }
+            &_yellow {
+                background: #FFD83B;
+                color: #000000;
+            }
+    
         }
     }
 
@@ -293,6 +351,15 @@
         /* or 111% */
 
 
-        color: #292929;
+
+        a {
+            color: #292929;
+            text-decoration: none;
+            transition: all 0.4s ease;
+
+            &:hover {
+                color: rgb(155, 153, 153);
+            }
+        }
     }
 }

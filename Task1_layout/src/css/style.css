@@ -153,6 +153,17 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   line-height: 20px;
 }
+.excursions__list li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: -18px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/icon/check-mark.png");
+  transform: translate(-50%, -50%);
+}
 .excursions__block {
   margin-top: 20px;
   padding-left: 21px;
@@ -202,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
   }
   .excursions__item {
-    height: 600px;
+    height: 640px;
     max-width: 341px;
   }
   .excursions__row {
@@ -263,8 +274,19 @@ h1, h2, h3, h4, h5, h6 {
     /* or 143% */
     color: #4B4B4B;
   }
+  .excursions__list li:last-child::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: -18px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/icon/check-mark.png");
+    transform: translate(-50%, -50%);
+  }
   .excursions__block {
-    padding: 20px 0 0 20px;
+    margin-top: 25px;
     align-items: center;
   }
   .excursions__description {
@@ -348,17 +370,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #343434;
   list-style: none;
 }
-.item__list li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 30%;
-  left: -18px;
-  width: 16px;
-  height: 16px;
-  background-image: url("../img/icon/check-mark.png");
-  transform: translate(-50%, -50%);
-}
 .item__block {
   display: flex;
 }
@@ -391,4 +402,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 .item__description a:hover {
   color: rgb(155, 153, 153);
+}
+
+.shedule {
+  display: inline-flex;
+}
+.shedule__item {
+  margin: 0 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 73px;
+  height: 28px;
+  background: #C5DCFF;
+  border-radius: 11px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+.shedule__item_active {
+  background: #6BA6FF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  color: #FFFFFF;
+}
+@media (max-width: 500px) {
+  .shedule {
+    margin-top: 20px;
+  }
+  .shedule__item {
+    margin: 0 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 63px;
+    height: 24px;
+    border-radius: 11px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }

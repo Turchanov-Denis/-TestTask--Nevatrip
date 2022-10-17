@@ -65,6 +65,17 @@
             font-weight: 400;
             font-size: 18px;
             line-height: 20px;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 30%;
+                left: -18px;
+                width: 16px;
+                height: 16px;
+                background-image: url("../img/icon/check-mark.png");
+                transform: translate(-50%, -50%);
+            }
         }
     }
 
@@ -126,7 +137,7 @@
         }
 
         &__item {
-            height: 600px;
+            height: 640px;
             max-width: 341px;
         }
 
@@ -199,11 +210,24 @@
 
 
                 color: #4B4B4B;
+                &:last-child {
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 10%;
+                        left: -18px;
+                        width: 16px;
+                        height: 16px;
+                        background-image: url("../img/icon/check-mark.png");
+                        transform: translate(-50%, -50%);
+                    }
+                }
             }
         }
 
         &__block {
-            padding: 20px 0 0 20px;
+            margin-top: 25px;
             align-items: center;
         }
 
@@ -304,17 +328,7 @@
             color: #343434;
             list-style: none;
 
-            &::before {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 30%;
-                left: -18px;
-                width: 16px;
-                height: 16px;
-                background-image: url("../img/icon/check-mark.png");
-                transform: translate(-50%, -50%);
-            }
+           
         }
 
     }

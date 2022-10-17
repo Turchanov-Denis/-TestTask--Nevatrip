@@ -11,8 +11,12 @@ body {
     width: 1070px;
     padding: 0 15px;
     margin: 0 auto;
+    @media (max-width: 500px) {
+        padding: 0 10px;
+        width: 400px;
+    }
 }
 
 
-
-@import '_excursions.scss'
+@import '_nullstyle.scss';
+@import '_excursions.scss';

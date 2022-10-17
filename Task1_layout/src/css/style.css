@@ -1,0 +1,14 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #E5E5E5;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  width: 1070px;
+  padding: 0 15px;
+  margin: 0 auto;
+}

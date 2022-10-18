@@ -148,6 +148,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 52px;
 }
 .excursions__list li {
+  position: relative;
+  font-style: normal;
   padding-bottom: 14px;
   font-weight: 400;
   font-size: 18px;
@@ -360,12 +362,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #9E9E9E;
 }
 .item__list li {
-  padding-bottom: 14px;
-  position: relative;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 20px;
   /* or 111% */
   color: #343434;
   list-style: none;

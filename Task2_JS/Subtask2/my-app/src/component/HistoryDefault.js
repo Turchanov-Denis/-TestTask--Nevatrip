@@ -1,6 +1,6 @@
 
 
-export default function HistoryDefault({item,timeArrive}) {
+export default function HistoryDefault({ item, timeArrive }) {
     return (
         <div style={{
             "marginTop": "30px"

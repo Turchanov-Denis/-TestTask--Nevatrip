@@ -33,13 +33,13 @@ function App() {
       </section>
 
       <button style={{
-          "width": "100px",
-          "height": "40px",
-          "marginTop": "30px"
-        }} onClick={() => getList()}>Посчитать</button>
+        "width": "100px",
+        "height": "40px",
+        "marginTop": "30px"
+      }} onClick={() => getList()}>Посчитать</button>
 
       <section className='historyOrders'>
-        {listHistoryOrders.map(item => (item.route !== "из A в B и обратно в А") ? <HistoryDefault item = {item} timeArrive={timeArrive}></HistoryDefault> : <HistoryDouble item = {item} timeArrive={timeArrive}></HistoryDouble>)}
+        {listHistoryOrders.map(item => (item.route !== "из A в B и обратно в А") ? <HistoryDefault item={item} timeArrive={timeArrive}></HistoryDefault> : <HistoryDouble item={item} timeArrive={timeArrive}></HistoryDouble>)}
       </section>
     </div>
   );

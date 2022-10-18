@@ -6,8 +6,4 @@
 
 .ticket__item {
   height: 30px;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }

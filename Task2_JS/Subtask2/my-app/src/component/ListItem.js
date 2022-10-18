@@ -15,7 +15,7 @@ export default function ListItem({historyOrders,setHistoryOrders}) {
         console.log(historyOrders)
     },[amount,route,timeTo,timeFrom])
     return (
-        <div className="list-item">
+        <div className="ticket__item">
             <select name="route" id="route" onChange={e => setRoute(e.target.value)}>
                 <option value="из A в B">из A в B</option>
                 <option value="из B в A">из B в A</option>
@@ -48,7 +48,7 @@ export default function ListItem({historyOrders,setHistoryOrders}) {
                 {sheduleFrom.filter(item => item > timeTo).map(item => <option value={item}>{item}(из B в A)</option>)}
                 </select>
             </>}
-            {(route && (timeTo || timeFrom)) && <><label>amount</label> <input type="number" onChange={e => { setAmount((e.target.value)) }}></input></>}
+            {(route && (timeTo || timeFrom)) && <><label>Количество</label> <input type="number" onChange={e => { setAmount((e.target.value)) }}></input></>}
         </div>
 
     )

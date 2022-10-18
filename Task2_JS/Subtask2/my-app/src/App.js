@@ -12,7 +12,7 @@ function App() {
   function getList() {
     // const listItems = document.querySelector(".list-item");
     console.log(historyOrders);
-    (Number(historyOrders.amount) > 0) && setListHistoryOrders(prev => [...prev, historyOrders])
+    (Number(historyOrders.amount) > 0) ? setListHistoryOrders(prev => [...prev, historyOrders]) : alert("Неверно указано количество")
 
 
   }
@@ -27,14 +27,16 @@ function App() {
     return (date.getHours() < 9 ? "0" + date.getHours() : date.getHours()) + ":" + (date.getMinutes() < 9 ? "0" + date.getMinutes() : date.getMinutes())
   }
   return (
-    <div>
+    <div className='wrapper'>
       <section className='ticket'>
         <ListItem historyOrders={historyOrders} setHistoryOrders={setHistoryOrders}></ListItem>
-        <button style={{
-          "width": "100px",
-          "height": "40px"
-        }} onClick={() => getList()}>Check out</button>
       </section>
+
+      <button style={{
+          "width": "100px",
+          "height": "40px",
+          "marginTop": "30px"
+        }} onClick={() => getList()}>Посчитать</button>
 
       <section className='historyOrders'>
         {listHistoryOrders.map(item => (item.route !== "из A в B и обратно в А") ? <HistoryDefault item = {item} timeArrive={timeArrive}></HistoryDefault> : <HistoryDouble item = {item} timeArrive={timeArrive}></HistoryDouble>)}

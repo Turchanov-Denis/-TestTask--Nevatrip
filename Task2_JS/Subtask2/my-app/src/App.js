@@ -1,7 +1,8 @@
 import ListItem from './component/ListItem';
 import './css/style.css'
 import { useState } from "react"
-
+import HistoryDefault from './component/HistoryDefault';
+import HistoryDouble from './component/HistoryDouble';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
   function getList() {
     // const listItems = document.querySelector(".list-item");
     console.log(historyOrders);
-    (Number(historyOrders.amount) !== 0) && setListHistoryOrders(prev => [...prev, historyOrders])
+    (Number(historyOrders.amount) > 0) && setListHistoryOrders(prev => [...prev, historyOrders])
 
 
   }
@@ -36,11 +37,7 @@ function App() {
       </section>
 
       <section className='historyOrders'>
-        {listHistoryOrders.map(item => (item.route !== "из A в B и обратно в А") ? <div style={{
-          "marginTop": "30px"
-        }}>Вы выбрали {item.amount} билета по маршруту из {item.route} стоимостью {Number(item.amount) * 400}р. <br></br> Это путешествие займет у вас 40 минут. <br></br>Теплоход отправляется в {(item.route == "из A в B" ? item.timeTo : item.timeFrom)}, а прибудет в {timeArrive((item.route == "из A в B" ? item.timeTo : item.timeFrom))}</div> : <div style={{
-          "marginTop": "30px"
-        }}>Вы выбрали {item.amount} билета по маршруту из {item.route} стоимостью {Number(item.amount) * 400}р. <br></br>Теплоход отправляется в {item.timeTo}, а прибудет в {timeArrive(item.timeTo)}<br></br>Обратный путь: теплоход отправляется в {item.timeFrom}, а прибудет в {timeArrive(item.timeFrom)}</div>)}
+        {listHistoryOrders.map(item => (item.route !== "из A в B и обратно в А") ? <HistoryDefault item = {item} timeArrive={timeArrive}></HistoryDefault> : <HistoryDouble item = {item} timeArrive={timeArrive}></HistoryDouble>)}
       </section>
     </div>
   );

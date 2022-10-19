@@ -1,3 +1,5 @@
+// component printing arrive and departure 
+
 export default function HistoryDefault({ item, timeArrive }) {
 
     return (

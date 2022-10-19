@@ -1,0 +1,443 @@
+@charset "UTF-8";
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #FFFFFF;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  width: 1070px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 0 10px;
+    width: 400px;
+  }
+}
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+.excursions {
+  padding: 30px 0;
+}
+.excursions__body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.excursions__item {
+  margin-bottom: 60px;
+  height: 370px;
+  width: 100%;
+}
+.excursions__row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.excursions__column {
+  position: relative;
+  flex: 0 0 473px;
+}
+.excursions__column_big {
+  flex: 1 0 600px;
+}
+.excursions__time {
+  padding-left: 45px;
+}
+.excursions__time::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 33px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/icon/clock-circular-outline.png");
+  transform: translate(-50%, -50%);
+}
+.excursions__title {
+  padding: 25px;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+}
+.excursions__subtitle {
+  display: none;
+}
+.excursions__list {
+  padding-left: 52px;
+}
+.excursions__list li {
+  position: relative;
+  font-style: normal;
+  padding-bottom: 14px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+}
+.excursions__list li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: -18px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/icon/check-mark.png");
+  transform: translate(-50%, -50%);
+}
+.excursions__block {
+  margin-top: 20px;
+  padding-left: 21px;
+  align-items: center;
+}
+.excursions__description {
+  margin-left: 10px;
+  width: 187px;
+  height: 52px;
+}
+.excursions__price {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 20px;
+}
+.excursions__price span {
+  font-size: 14px;
+}
+.excursions__image-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 154px;
+  height: 42px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  /* or 125% */
+}
+.excursions__image-label_blue {
+  background: #099CE8;
+  color: #FFFFFF;
+}
+.excursions__image-label_yellow {
+  background: #FFD83B;
+  color: #000000;
+}
+@media (max-width: 900px) {
+  .excursions {
+    padding-top: 25px;
+  }
+  .excursions__row {
+    flex-direction: column;
+  }
+  .excursions__item {
+    height: 640px;
+    max-width: 341px;
+  }
+  .excursions__row {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .excursions__column {
+    flex: 0 0 220px;
+    display: flex;
+    flex-direction: column;
+  }
+  .excursions__column_big {
+    flex: 1 0 384px;
+  }
+  .excursions__time {
+    margin-top: 12px;
+    padding-left: 35px;
+  }
+  .excursions__time::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/icon/clock-circular-outline.png");
+    transform: translate(-50%, -50%);
+  }
+  .excursions__title {
+    display: none;
+    font-size: 14px;
+    padding: 12px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+  .excursions__subtitle {
+    display: block;
+    font-size: 14px;
+    padding: 12px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+  .excursions__price {
+    font-size: 30px;
+  }
+  .excursions__price span {
+    font-size: 10px;
+  }
+  .excursions__list {
+    padding: 20px 0 0 40px;
+  }
+  .excursions__list li {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    color: #4B4B4B;
+  }
+  .excursions__list li:last-child::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: -18px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/icon/check-mark.png");
+    transform: translate(-50%, -50%);
+  }
+  .excursions__block {
+    margin-top: 25px;
+    align-items: center;
+  }
+  .excursions__description {
+    width: 165px;
+    height: 44px;
+    margin-left: 45px;
+  }
+  .excursions__price {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 20px;
+  }
+  .excursions__price span {
+    font-size: 10px;
+  }
+  .excursions__image-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100px;
+    height: 42px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    /* or 125% */
+  }
+  .excursions__image-label_blue {
+    background: #099CE8;
+    color: #FFFFFF;
+  }
+  .excursions__image-label_yellow {
+    background: #FFD83B;
+    color: #000000;
+  }
+}
+
+.item {
+  border: 0.5px solid #8E8E8E;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.item__image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.item__label {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.item__title {
+  font-style: normal;
+  /* or 131% */
+  color: #000000;
+}
+.item__time {
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+  color: #9E9E9E;
+}
+.item__list li {
+  /* or 111% */
+  color: #343434;
+  list-style: none;
+}
+.item__block {
+  display: flex;
+}
+.item__price {
+  font-style: normal;
+  /* or 56% */
+  color: #000000;
+}
+.item__price span {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* or 143% */
+  color: #000000;
+}
+.item__description {
+  background: #FFD83C;
+  border-radius: 23px;
+  border-color: rgba(255, 255, 255, 0);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  /* or 111% */
+}
+.item__description a {
+  color: #292929;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.item__description a:hover {
+  color: rgb(155, 153, 153);
+}
+
+.shedule {
+  display: inline-flex;
+}
+.shedule__item {
+  margin: 0 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 73px;
+  height: 28px;
+  background: #C5DCFF;
+  border-radius: 11px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+.shedule__item_active {
+  background: #6BA6FF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  color: #FFFFFF;
+}
+@media (max-width: 500px) {
+  .shedule {
+    margin-top: 20px;
+  }
+  .shedule__item {
+    margin: 0 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 63px;
+    height: 24px;
+    border-radius: 11px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

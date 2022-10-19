@@ -41,7 +41,7 @@ function App() {
 
       {/* history orders */}
       <section className='historyOrders'>
-        {listHistoryOrders.map(item => (item.route !== "из A в B и обратно в А") ? <HistoryDefault item={item} timeArrive={timeArrive}></HistoryDefault> : <HistoryDouble item={item} timeArrive={timeArrive}></HistoryDouble>)}
+        {listHistoryOrders.map(item => (item.route !== "из A в B и обратно в A") ? <HistoryDefault item={item} timeArrive={timeArrive}></HistoryDefault> : <HistoryDouble item={item} timeArrive={timeArrive}></HistoryDouble>)}
       </section>
     </div>
   );

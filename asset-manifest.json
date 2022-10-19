@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/-TestTask--Nevatrip/static/css/main.ae4b417a.css",
+    "main.js": "/-TestTask--Nevatrip/static/js/main.ef0e42bd.js",
+    "index.html": "/-TestTask--Nevatrip/index.html",
+    "main.ae4b417a.css.map": "/-TestTask--Nevatrip/static/css/main.ae4b417a.css.map",
+    "main.ef0e42bd.js.map": "/-TestTask--Nevatrip/static/js/main.ef0e42bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ae4b417a.css",
+    "static/js/main.ef0e42bd.js"
+  ]
+}
